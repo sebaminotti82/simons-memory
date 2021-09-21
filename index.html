@@ -5,54 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="main.js"></script>
-     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
-    <!-- REALIZZO IL MEMORY UN SEMPLICE GIOCO  DI MEMORIA !! 
-    IL COMPUTER GENERA CASUALMENTE 5 NUMERI !  CHE POI MOSTRERA' PER 30 SECONDI ! (O IN BASE AI LIVELLI )
-    AL TERMINE DEI 30 SECONDI I NUMERI SCOMPARIRANNO  ED APPARIRA' UN PROMT CON LA QUALE L'UTENTE INSERIRA' I NUMERI CHE SI SPERA RICPRDERA'
-    (NEL MIO CASO PERDEREI SICURAMENTESE NON USASSI L'INSPECTOR)
-    SE L'UTENTE RICORDERA' TUTTI I NUMERI ALLORA DECRETEREMO LA VITTORIA IN CASO CONTRARIO LA SCONFITTA INDICANDO SE E QUANTI NUMERI HA RICORDATO !! -->
+    <header>
+        <h1>Memory-Game</h1>
+        
+    </header>
 
-    <!-- PARTE DI HTML -->
 
-    <div class="cover">
-
-      <div class="accordioGioco">
-        <h3>ISTRUZIONI GIOCO  </h3>
-        <button id="info">Info</button>
-        <p>
-         CIAO GIOCATORE, METTIAMO ALLA PROVA LA TUA MEMORIA! ORA TI MOSTRERO' 5 NUMERI OSSERVALI ATTENTAMENTE PER 30 SECONDI , AL TERMINE DEI QUALI SCOMPARIRANNO.
-         DOVRAI RICORDARLI TUTTI SE VORRAI VINCERE (SE VAVRAI BUONA MEMORIA AVRAI VINTO ! IN ALTERNATIVA FOSFORO GRATIS)
-        </p>
-      </div>
-      <!-- fine accordio gioco -->
-
-      <!-- inizio contenitore numeri da ricordare -->
-
-      <div class="numeri">
-          <h2>RICORDA QUESTI NUMERI</h2>
+    <div class="numeri">
+        <h2>RICORDA QUESTI NUMERI</h2>
           <h1 id="numeriPc"></h1>
-      </div>
-
-      <div class="countDown">
-      
-        <h1 id="secondi"></h1>
-
-      </div>
+    </div>
 
     <div class="risultato">
-      <h1>QUA VERRA INDICATO IL TUO RISULTATO</h1>
-      <h2 id="livello"></h2>
-      <h2 id="risultato"></h2>
-      <h2 id="numeriRicordati"></h2>
+        <h1>RISULTATO DEL GIOCO</h1>
+        <h2>AVRAI RICORDATO TUTTI I TUOI NUMERI?</h2>
+
+        
+        <h3 id="esito"></h3>
+        
+
+    </div>
+
+    <div class="menu-verticale">
+        <div class="BOTTONE">
+            <button id="start">START-GAME</button>
+        </div>
+
+    <div class="timer">
+        <h1 id="secondi"></h1>
+    </div>
+
+    <div class="regolamento">
+       
+        <h5>REGOLAMENTO GIOCO</h5>
+          <button id="game">CLICK ME</button>
+        <p>
+         Memory Game : il gioco consiste nel mostrarti 5 numeri generati automaticamente, questi numeri saranno visibili per 30 secondi al termine dei quali scompariranno .
+         Una volta scomparsi comparira' un prompt dove dovrai inserire tutti e 5 i numeri!! Se avrai ricordato tutti e 5 i numeri allora avrai vinto , altrimenti (come me) 
+         vuol dire che sei parecchio smemorato 😆😆😆😆😆
+        </p>
     </div>
 
     </div>
-  
-
-   
 </body>
 </html>

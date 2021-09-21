@@ -1,127 +1,150 @@
-
-
-  /* REALIZZO IL MEMORY UN SEMPLICE GIOCO  DI MEMORIA !! 
-  IL COMPUTER GENERA CASUALMENTE 5 NUMERI !  CHE POI MOSTRERA' PER 30 SECONDI ! (O IN BASE AI LIVELLI )
-  AL TERMINE DEI 30 SECONDI I NUMERI SCOMPARIRANNO  ED APPARIRA' UN PROMT CON LA QUALE L'UTENTE INSERIRA' I NUMERI CHE SI SPERA RICPRDERA'
-  (NEL MIO CASO PERDEREI SICURAMENTESE NON USASSI L'INSPECTOR)
-  SE L'UTENTE RICORDERA' TUTTI I NUMERI ALLORA DECRETEREMO LA VITTORIA IN CASO CONTRARIO LA SCONFITTA INDICANDO SE E QUANTI NUMERI HA RICORDATO !! */
-
-/* PARTE DI CSS !! POTREI INSERIRLA INLINE MA NON MI PIACE COME METODO */
 *{
-    margin: 0;box-sizing: border-box;padding: 0;
+    margin: 0; padding: 0; box-sizing: border-box;
 }
-
-/* iniziamo con un cover che sarà il contenitore di tutta la pagina  */
-/* PARTE DI COVER  */
-.cover {
-position: relative;
-width: 100vw;
-height: 100vh;
-background-color: rgb(138, 156, 173);
-}
-/* FINE PARTE DI COVER */
-
-/* ACCORDIO GIOCO */
-.accordioGioco{
-position: absolute;
-width: 50vw;
-height: 20vh;
-padding: 10px;
-margin-top: 10px;
-margin-left: 10px;
-box-shadow: 0px 0px 2px 2px white;
-font-family: sans-serif;
-border-radius:10px ;
-color: white;
-}
-.accordioGioco P{
-    border: 1px solid white;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 10px;
-    color: #4d4d4d;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    box-shadow: 0px 0px 2px 2px white;
-    display: none;
-    font-size: 0.8em;
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(30, 58, 99);
     
 }
-.active {
-    display:block;
-}
-/* FINE ACCORDIO GIOCO */
 
-/* contenitore numeri generati dal pc */
+header{
+    width: 100%;
+    height: 10%;
+    background-color: red;
+}
+header h1 {
+    font-size: 4vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
 .numeri{
-    box-shadow: 0px 0px 2px 2px white;
-    border-radius: 10px;
-    float: right;
-    margin-right: 20px;
-    margin-top: 10px;
-    width: 400px;
-    height: 20vh;
+    margin-left: 60%;
+    transform: translate(-50%);
+    margin-top: 9vh;
+    position: absolute;
+    width: 40vw;
+    height: 25vh;
+    background-color: red;
 }
 .numeri h1{
+    padding: 5px;
+    margin-top: 5vh;
     text-align: center;
-    color: yellowgreen;
-    font-family: sans-serif;
-    line-height: 10vh;
-
-}
-.numeri h2{
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.5vw;
 
 }
-/* fine contenitore numeri generati */
-/* inizio sezione countdown */
-.countDown{
-    position: absolute;
-    background-color: yellowgreen;
-    width: 170px;
-    height: 170px;
-    border-radius: 10px;
-    margin: 1px solid grey;
-    margin-top: 10px;
-    margin-left: 55vw;
+.numeri h2 {
+    font-size: 2vw;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
 }
-.countDown h1{
-    line-height: 170px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
-    font-size: 2.8em;
+
+
+.menu-verticale{
+width: 20%;
+height: calc( 100vh - 10%);
+background-color: red;
 }
 
-/* fine countdown */
 
-/* inizio div esito */
-.risultato{
-    width: 800px;
-    height: 200px;
-    box-shadow: 0px 0px 2px 2px white;
-    position: absolute;
-    bottom: 5vh;
+.BOTTONE {
+width: 100%;
+height: 5vh;
+}
+
+
+.BOTTONE button {
+    width: 10vw;
+    height: 5vh;
+    font-size: 1vw;
     margin-left: 50%;
     transform: translate(-50%);
-    border-radius: 10px;
+    outline: none;
 }
-.risultato h1 {
-   
+
+.timer{
+    margin-top: 1.5vh;
+    border-radius: 1vw;
+    width: 80%;
+    height: 25vh;
+    margin-left: 10%;
+    background-color: red;
+    box-shadow:  0px 0px 2px 2px white;
+}
+.timer h1 {
+    font-size: 8vw;
     text-align: center;
-    font-family: sans-serif;
-    color: greenyellow;
+    line-height: 25vh;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    
 
 }
-.risultato h2 { 
-    margin-top: 20px;
+
+.risultato{
+    position: absolute;
+    margin-left: 60%;
+    transform: translate(-50%);
+    bottom: 10vh;
+    width: 50vw;
+    height: 30vh;
+    border: 2px solid rgb(231, 209, 209);
+
+}
+
+.risultato h1, .risultato h2 {
+    color: rgb(228, 200, 200);
+    font-size: 1.2vw;
     text-align: center;
-    font-family: sans-serif;
-    color: greenyellow;
-
-
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.risultato h3 {
+    font-size: 1.3vw;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 2vh;
+    padding: 10px;
+    
+}
+.regolamento{
+    width: 80%;
+    border: 1px solid white;
+    margin-left: 10%;
+    margin-top: 5%;
+    border-radius:2% ;
+}
+.regolamento h5{
+font-size: 1.2vw;
+text-align: center;
+color: white;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+margin-top: 2vh;
 }
 
 
+.active{
+    display: block;
+}
+
+.regolamento p{
+    display: none;
+    padding: 7px;
+    font-size: 0.9vw;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#game{
+    width: 10vw;
+    height: 5vh;
+    font-size: 1vw;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 2vh;
+}
